@@ -14,6 +14,9 @@
 		E644A40B1B7805F30088FCDD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E644A40A1B7805F30088FCDD /* Images.xcassets */; };
 		E644A40E1B7805F30088FCDD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E644A40C1B7805F30088FCDD /* LaunchScreen.xib */; };
 		E644A41A1B7805F30088FCDD /* ConstraintShenanigansTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E644A4191B7805F30088FCDD /* ConstraintShenanigansTests.m */; };
+		E644A4271B78069E0088FCDD /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E644A4241B78069E0088FCDD /* CustomTableViewCell.xib */; };
+		E644A4281B78069E0088FCDD /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E644A4251B78069E0088FCDD /* TableViewCell.xib */; };
+		E644A4321B7807830088FCDD /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E644A4311B7807830088FCDD /* CustomTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,10 @@
 		E644A4131B7805F30088FCDD /* ConstraintShenanigansTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConstraintShenanigansTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E644A4181B7805F30088FCDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E644A4191B7805F30088FCDD /* ConstraintShenanigansTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConstraintShenanigansTests.m; sourceTree = "<group>"; };
+		E644A4241B78069E0088FCDD /* CustomTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
+		E644A4251B78069E0088FCDD /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		E644A42E1B7807720088FCDD /* ConstraintShenanigans-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ConstraintShenanigans-Bridging-Header.h"; sourceTree = "<group>"; };
+		E644A4311B7807830088FCDD /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,12 +88,16 @@
 		E644A3FC1B7805F30088FCDD /* ConstraintShenanigans */ = {
 			isa = PBXGroup;
 			children = (
+				E644A40A1B7805F30088FCDD /* Images.xcassets */,
 				E644A4011B7805F30088FCDD /* AppDelegate.h */,
 				E644A4021B7805F30088FCDD /* AppDelegate.m */,
 				E644A4041B7805F30088FCDD /* ViewController.h */,
 				E644A4051B7805F30088FCDD /* ViewController.m */,
+				E644A42E1B7807720088FCDD /* ConstraintShenanigans-Bridging-Header.h */,
+				E644A4311B7807830088FCDD /* CustomTableViewCell.swift */,
 				E644A4071B7805F30088FCDD /* Main.storyboard */,
-				E644A40A1B7805F30088FCDD /* Images.xcassets */,
+				E644A4241B78069E0088FCDD /* CustomTableViewCell.xib */,
+				E644A4251B78069E0088FCDD /* TableViewCell.xib */,
 				E644A40C1B7805F30088FCDD /* LaunchScreen.xib */,
 				E644A3FD1B7805F30088FCDD /* Supporting Files */,
 			);
@@ -200,7 +211,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E644A4091B7805F30088FCDD /* Main.storyboard in Resources */,
+				E644A4281B78069E0088FCDD /* TableViewCell.xib in Resources */,
 				E644A40E1B7805F30088FCDD /* LaunchScreen.xib in Resources */,
+				E644A4271B78069E0088FCDD /* CustomTableViewCell.xib in Resources */,
 				E644A40B1B7805F30088FCDD /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -221,6 +234,7 @@
 			files = (
 				E644A4061B7805F30088FCDD /* ViewController.m in Sources */,
 				E644A4031B7805F30088FCDD /* AppDelegate.m in Sources */,
+				E644A4321B7807830088FCDD /* CustomTableViewCell.swift in Sources */,
 				E644A4001B7805F30088FCDD /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -349,9 +363,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = ConstraintShenanigans/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ConstraintShenanigans/ConstraintShenanigans-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -359,9 +377,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = ConstraintShenanigans/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ConstraintShenanigans/ConstraintShenanigans-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -418,6 +439,7 @@
 				E644A41F1B7805F30088FCDD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E644A4201B7805F30088FCDD /* Build configuration list for PBXNativeTarget "ConstraintShenanigansTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +448,7 @@
 				E644A4221B7805F30088FCDD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
